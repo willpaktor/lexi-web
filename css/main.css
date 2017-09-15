@@ -1,0 +1,595 @@
+/*! normalize.css v5.0.0 | MIT License | github.com/necolas/normalize.css */
+@import url("https://fonts.googleapis.com/css?family=Roboto|Roboto+Mono");
+html {
+  font-family: sans-serif;
+  line-height: 1.15;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+}
+
+article,
+aside,
+footer,
+header,
+nav,
+section {
+  display: block;
+}
+
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+figcaption,
+figure,
+main {
+  display: block;
+}
+
+figure {
+  margin: 1em 40px;
+}
+
+hr {
+  box-sizing: content-box;
+  height: 0;
+  overflow: visible;
+}
+
+pre {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+a {
+  background-color: transparent;
+  -webkit-text-decoration-skip: objects;
+}
+
+a:active,
+a:hover {
+  outline-width: 0;
+}
+
+abbr[title] {
+  border-bottom: none;
+  text-decoration: underline;
+  text-decoration: underline dotted;
+}
+
+b,
+strong {
+  font-weight: inherit;
+}
+
+b,
+strong {
+  font-weight: bolder;
+}
+
+code,
+kbd,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+dfn {
+  font-style: italic;
+}
+
+mark {
+  background-color: #ff0;
+  color: #000;
+}
+
+small {
+  font-size: 80%;
+}
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+audio,
+video {
+  display: inline-block;
+}
+
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+img {
+  border-style: none;
+}
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: sans-serif;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+}
+
+button,
+input {
+  overflow: visible;
+}
+
+button,
+select {
+  text-transform: none;
+}
+
+button,
+html [type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+}
+
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+legend {
+  box-sizing: border-box;
+  color: inherit;
+  display: table;
+  max-width: 100%;
+  padding: 0;
+  white-space: normal;
+}
+
+progress {
+  display: inline-block;
+  vertical-align: baseline;
+}
+
+textarea {
+  overflow: auto;
+}
+
+[type="checkbox"],
+[type="radio"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+[type="search"] {
+  -webkit-appearance: textfield;
+  outline-offset: -2px;
+}
+
+[type="search"]::-webkit-search-cancel-button,
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  font: inherit;
+}
+
+details,
+menu {
+  display: block;
+}
+
+summary {
+  display: list-item;
+}
+
+canvas {
+  display: inline-block;
+}
+
+template {
+  display: none;
+}
+
+[hidden] {
+  display: none;
+}
+
+body {
+  width: 100%;
+  font-family: 'Roboto', Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: 'Roboto Mono', monospace;
+  line-height: 1.3;
+  font-weight: bold;
+  margin-top: 0;
+  margin-bottom: 8px;
+}
+
+h1 {
+  font-size: 40px;
+}
+
+h2 {
+  font-size: 32px;
+}
+
+h3 {
+  font-size: 24px;
+}
+
+h4 {
+  font-size: 20px;
+}
+
+h5 {
+  font-size: 18px;
+}
+
+p {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-top: 0;
+  margin-bottom: 8px;
+}
+
+.hero {
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(145deg, #FF9498 0%, #EB4E89 100%);
+}
+@media screen and (max-width: 992px) {
+  .hero {
+    height: auto;
+    padding: 120px 0;
+  }
+}
+@media screen and (max-width: 576px) {
+  .hero {
+    padding: 60px 0;
+  }
+}
+.hero .container {
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 960px;
+  height: 100%;
+}
+@media screen and (max-width: 992px) {
+  .hero .container {
+    width: 96%;
+  }
+}
+
+.hero-content {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+@media screen and (max-width: 992px) {
+  .hero-content {
+    flex-direction: column-reverse;
+    justify-content: center;
+  }
+}
+
+.hero-preview {
+  margin: 0 auto;
+  width: 45%;
+  height: 100%;
+  min-height: 600px;
+  background-image: url(../images/iphone.png);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+@media screen and (max-width: 992px) {
+  .hero-preview {
+    width: 90%;
+    max-width: 420px;
+    flex-direction: column-reverse;
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 576px) {
+  .hero-preview {
+    width: 96%;
+    min-height: 500px;
+    background-size: 240px;
+  }
+}
+.hero-preview ul {
+  margin: 0 auto;
+  padding-left: 0;
+  padding-top: 90px;
+  max-width: 320px;
+}
+@media screen and (max-width: 576px) {
+  .hero-preview ul {
+    padding: 70px 5% 0;
+  }
+}
+.hero-preview li {
+  width: 100%;
+  margin-bottom: 12px;
+  list-style: none;
+  animation: slideUp .2s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+  position: relative;
+  top: 20px;
+  opacity: 0;
+}
+@keyframes slideUp {
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+.hero-preview li.d2 {
+  animation-delay: .5s;
+}
+.hero-preview li.d3 {
+  animation-delay: 2s;
+}
+.hero-preview li.d4 {
+  animation-delay: 3.5s;
+}
+.hero-preview li.d5 {
+  animation-delay: 4.5s;
+}
+@media screen and (max-width: 576px) {
+  .hero-preview li {
+    margin-bottom: 10px;
+  }
+}
+.hero-preview li span {
+  display: inline-block;
+  max-width: 260px;
+  padding: 8px 10px;
+  border-radius: 6px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  font-size: 24px;
+}
+@media screen and (max-width: 576px) {
+  .hero-preview li span {
+    max-width: 220px;
+    font-size: 20px;
+  }
+}
+.hero-preview li.bot span {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  color: #333;
+}
+.hero-preview li.user {
+  text-align: right;
+}
+.hero-preview li.user span {
+  background-color: #9E1649;
+  color: #fff;
+}
+
+.hero-detial {
+  align-self: center;
+  width: 45%;
+  color: #fff;
+}
+@media screen and (max-width: 992px) {
+  .hero-detial {
+    width: 90%;
+    max-width: 640px;
+    margin: 0 auto 48px;
+  }
+}
+.hero-detial h1, .hero-detial h3 {
+  text-align: center;
+  text-shadow: 0px 4px 8px rgba(141, 18, 64, 0.5);
+}
+.hero-detial h1 {
+  font-size: 56px;
+}
+.hero-detial h3 {
+  margin-bottom: 48px;
+}
+.hero-detial .more {
+  display: none;
+  color: #9E1649;
+  font-weight: bold;
+  text-align: center;
+}
+@media screen and (max-width: 576px) {
+  .hero-detial .more {
+    display: block;
+  }
+}
+@media screen and (max-width: 576px) {
+  .hero-detial .description {
+    width: 100%;
+    height: 72px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+  }
+}
+.hero-detial .description.expand {
+  height: auto;
+  display: block;
+}
+
+.btn-appstore {
+  display: block;
+  width: 180px;
+  height: 54px;
+  margin: 48px auto 0;
+  background: url(../images/label-ios.png);
+  background-image: url(../images/label-ios.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+@media screen and (max-width: 576px) {
+  .btn-appstore {
+    margin-top: 32px;
+  }
+}
+.btn-appstore:hover {
+  opacity: .8;
+}
+
+.fanpage {
+  position: absolute;
+  top: 30px;
+  right: 0;
+  width: 30px;
+  height: 30px;
+  background: url(../images/fb-icon.png);
+  background-image: url(../images/fb-icon.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+@media screen and (max-width: 992px) {
+  .fanpage {
+    margin-top: -120px;
+    top: 20px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .fanpage {
+    margin-top: -60px;
+    top: 10px;
+    right: 10px;
+  }
+}
+.fanpage:hover {
+  opacity: .8;
+}
+
+.hide-text {
+  white-space: nowrap;
+  overflow: hidden;
+  text-indent: 100%;
+}
+
+.summary .container {
+  padding: 120px 0;
+}
+@media screen and (max-width: 576px) {
+  .summary .container {
+    padding: 60px 0;
+  }
+}
+
+.summary-content {
+  width: 90%;
+  max-width: 640px;
+  margin: 0 auto;
+}
+.summary-content h2 {
+  margin-bottom: 32px;
+  color: #EE5872;
+  text-align: center;
+}
+@media screen and (max-width: 576px) {
+  .summary-content h2 {
+    text-align: left;
+  }
+}
+
+.summary-detail {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 120px;
+}
+@media screen and (max-width: 576px) {
+  .summary-detail {
+    margin-bottom: 60px;
+  }
+}
+.summary-detail li {
+  margin-left: 20px;
+  margin-bottom: 16px;
+}
+
+.summary-footer {
+  text-align: center;
+}
+.summary-footer .lexi-icon {
+  margin-bottom: 8px;
+}
+.summary-footer p {
+  color: #EE5872;
+}
+
+footer {
+  width: 100%;
+  padding: 30px 0;
+  background-color: #333;
+  text-align: center;
+}
+@media screen and (max-width: 576px) {
+  footer {
+    padding: 20px 0;
+  }
+}
+footer span {
+  font-size: 14px;
+  color: #fff;
+}
