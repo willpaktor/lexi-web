@@ -249,7 +249,7 @@ body {
 }
 
 .wrapper {
-  padding: constant(44px) constant(15pt) constant(44pt) constant(15pt);
+  padding: constant(44px) constant(15px) constant(44px) constant(15px);
 }
 
 * {
@@ -294,7 +294,7 @@ p {
 .hero {
   width: 100%;
   height: 100vh;
-  background: linear-gradient(145deg, #FF9498 0%, #EB4E89 100%);
+  background: linear-gradient(145deg, #ff9498 0%, #eb4e89 100%);
 }
 @media screen and (max-width: 992px) {
   .hero {
@@ -308,32 +308,43 @@ p {
   }
 }
 .hero .container {
-  display: flex;
-  align-items: center;
   position: relative;
   margin: 0 auto;
   width: 94%;
   max-width: 960px;
   height: 100%;
 }
+@media screen and (max-width: 576px) {
+  .hero .container {
+    width: 100%;
+  }
+}
 
 .hero-content {
   width: 100%;
+  height: inherit;
+  display: -webkit-flex;
   display: flex;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+  -webkit-justify-content: space-between;
   justify-content: space-between;
-  align-items: baseline;
+  -webkit-align-items: center;
+  align-items: center;
+  flex-wrap: wrap;
 }
 @media screen and (max-width: 992px) {
   .hero-content {
+    -webkit-flex-direction: column-reverse;
     flex-direction: column-reverse;
+    -webkit-justify-content: center;
     justify-content: center;
   }
 }
 
 .hero-preview {
   margin: 0 auto;
-  width: 35%;
-  height: 100%;
+  width: 40%;
   min-height: 600px;
   background-image: url(../images/iphone.png);
   background-position: center;
@@ -343,7 +354,9 @@ p {
   .hero-preview {
     width: 90%;
     max-width: 420px;
+    -webkit-flex-direction: column-reverse;
     flex-direction: column-reverse;
+    -webkit-justify-content: center;
     justify-content: center;
   }
 }
@@ -358,7 +371,7 @@ p {
   margin: 0 auto;
   padding-left: 0;
   padding-top: 90px;
-  max-width: 320px;
+  max-width: 360px;
 }
 @media screen and (max-width: 576px) {
   .hero-preview ul {
@@ -369,12 +382,27 @@ p {
   width: 100%;
   margin-bottom: 12px;
   list-style: none;
-  animation: slideUp .2s;
+  -moz-animation-name: slideUp;
+  -webkit-animation-name: slideUp;
+  animation-name: slideUp;
+  -moz-animation-duration: 0.2s;
+  -webkit-animation-duration: 0.2s;
+  animation-duration: 0.2s;
+  -moz-animation-timing-function: ease-out;
+  -webkit-animation-timing-function: ease-out;
   animation-timing-function: ease-out;
+  -moz-animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
   position: relative;
   top: 20px;
   opacity: 0;
+}
+@-webkit-keyframes slideUp {
+  to {
+    top: 0;
+    opacity: 1;
+  }
 }
 @keyframes slideUp {
   to {
@@ -404,7 +432,7 @@ p {
 }
 .hero-preview li span {
   display: inline-block;
-  max-width: 260px;
+  max-width: 280px;
   padding: 8px 10px;
   border-radius: 6px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
@@ -412,7 +440,7 @@ p {
 }
 @media screen and (max-width: 576px) {
   .hero-preview li span {
-    max-width: 220px;
+    max-width: 240px;
     font-size: 20px;
   }
 }
@@ -430,8 +458,9 @@ p {
 }
 
 .hero-detial {
+  -webkit-align-self: center;
   align-self: center;
-  width: 55%;
+  width: 50%;
   color: #fff;
 }
 @media screen and (max-width: 992px) {
@@ -516,7 +545,6 @@ p {
 @media screen and (max-width: 576px) {
   .fanpage {
     margin-top: -60px;
-    top: 10px;
     right: 10px;
   }
 }

@@ -1,3 +1,4 @@
+@import "compass/css3";
 @import "normalize";
 @import url('https://fonts.googleapis.com/css?family=Roboto|Roboto+Mono');
 body {
@@ -8,7 +9,7 @@ body {
 	color: #333;
 }
 .wrapper {
-	padding: constant(44px) constant(15pt) constant(44pt) constant(15pt); //for iPhoneX viewport-fit
+	padding: constant(44px) constant(15px) constant(44px) constant(15px); //for iPhoneX viewport-fit
 }
 * {
 	box-sizing: border-box;
@@ -45,7 +46,6 @@ p {
 	width: 100%;
 	height: 100vh;
 	background: linear-gradient(145deg, #FF9498 0%, #EB4E89 100%);
-	
 	@media screen and (max-width: 992px) {
 		height: auto;
 		padding: 120px 0;
@@ -56,31 +56,34 @@ p {
 	}
 
 	.container {
-		display: flex;
-		align-items: center;
 		position: relative;
 		margin: 0 auto;
 		width: 94%;
 		max-width: 960px;
 		height: 100%;
+		@media screen and (max-width: 576px) {
+			width: 100%;
+		}
 	}
 }
 .hero-content {
 	width: 100%;
-	display: flex;
-	justify-content: space-between;
-  	align-items: baseline;
+	height: inherit;
+	@include display-flex;
+	@include flex-direction(row);
+	@include justify-content(space-between);
+  	@include align-items(center);
+  	flex-wrap: wrap;
 
 	 @media screen and (max-width: 992px) {
-	  	flex-direction:column-reverse;
-	  	justify-content: center;
+	  	@include flex-direction(column-reverse);
+	  	@include justify-content(center);
 	 }
 
 }
 .hero-preview {
  	margin: 0 auto;
-	width: 35%;
-	height: 100%;
+	width: 40%;
 	min-height: 600px;
 	background-image: url(../images/iphone.png);
 	background-position: center;
@@ -89,8 +92,8 @@ p {
 	@media screen and (max-width: 992px) {
 		width: 90%;
 		max-width: 420px;
-		flex-direction: column-reverse;
-		justify-content: center;
+		@include flex-direction(column-reverse);
+		@include justify-content(center);
 	}
 	@media screen and (max-width: 576px) {
 		width: 96%;
@@ -102,7 +105,7 @@ p {
 		margin: 0 auto;
 		padding-left: 0;
 		padding-top: 90px;
-		max-width: 320px;
+		max-width: 360px;
 
 		@media screen and (max-width: 576px) {
 			padding: 70px 5% 0;
@@ -113,12 +116,19 @@ p {
 		width: 100%;
 		margin-bottom: 12px;
 		list-style: none;
-		animation: slideUp .2s;
-		animation-timing-function: ease-out;
-		animation-fill-mode: forwards;
+		@include animation-name(slideUp);
+		@include animation-duration(.2s);
+		@include animation-timing-function(ease-out);
+		@include animation-fill-mode(forwards);
 		position: relative;
 	    top: 20px;
 	    opacity: 0;
+		@-webkit-keyframes slideUp {
+    		to {
+			    top: 0;
+			    opacity: 1;
+    		}
+		}
 		@keyframes slideUp {
     		to {
 			    top: 0;
@@ -147,14 +157,14 @@ p {
 
 		span {
 			display: inline-block;
-			max-width: 260px;
+			max-width: 280px;
 			padding: 8px 10px;
 			border-radius: 6px;
 			box-shadow: 0 4px 8px rgba(0,0,0,.3);
 			font-size: 24px;
 
 			@media screen and (max-width: 576px) {
-				max-width: 220px;
+				max-width: 240px;
 				font-size: 20px;
 			}
 
@@ -176,8 +186,8 @@ p {
 	}
 }
 .hero-detial {
-	align-self: center;
- 	width: 55%;
+	@include align-self(center);
+ 	width: 50%;
 	color: #fff;
 
 	@media screen and (max-width: 992px) {
@@ -254,7 +264,6 @@ p {
 
   @media screen and (max-width: 576px) {
   	margin-top: -60px;
-  	top: 10px;
   	right: 10px;
   }
 
