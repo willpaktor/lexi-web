@@ -208,9 +208,14 @@ p {
 	}
 	.more {
 		display: none;
+		margin: 0 auto;
+		background: none;
+		border: none;
 		color: #9E1649;
 		font-weight: bold;
 		text-align: center;
+		text-decoration: underline;
+		cursor: pointer;
 		@media screen and (max-width: 576px) {
 			display: block;
 		}
